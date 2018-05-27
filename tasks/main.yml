@@ -1,0 +1,5 @@
+---
+# tasks file for ansible-linux-gitlab-smtp
+- name: configure gitlab.rb for smtp
+  template: src=gitlab.rb dest=/etc/gitlab/gitlab.rb owner=root group=root mode=0644
+  notify: reconfigure gitlab
